@@ -1,9 +1,8 @@
 App.elements = {
-    elements: {
         app: document.getElementById("app"),
 
         header: {
-            container: document.createElement("div"),
+            container: document.createElement("section"),
             logoleft: {
                 container: document.createElement("div"),
                 logoL: document.createElement("img"),
@@ -15,7 +14,7 @@ App.elements = {
         },
 
         mainbody: {
-            container: document.createElement("div"),
+            container: document.createElement("section"),
             bigimage: document.createElement("img"),
             Pdctcontainer: {
                 container: document.createElement("div"),
@@ -28,17 +27,15 @@ App.elements = {
         }, 
 
         cartbody: {
-            container: document.createElement("div"),
+            container: document.createElement("section"),
             pdct: {
                 container: document.createElement("div"),
             },
             button: document.createElement("button"),
         },
 
-
         footer: { 
-            container: document.createElement("div"),
+            container: document.createElement("section"),
             footerlogo: document.createElement("img"),
         }
-    }
 }
