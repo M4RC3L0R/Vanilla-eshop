@@ -1,1 +1,7 @@
-App.state = {}
+App.state = {
+    cart: [
+
+    ],
+
+    
+}

@@ -14,16 +14,10 @@ App.elements = {
         },
 
         mainbody: {
-            container: document.createElement("section"),
+            container: document.createElement("div"),
             bigimage: document.createElement("img"),
-            Pdctcontainer: {
-                container: document.createElement("div"),
-                pdcttitle: document.createElement("h2"),
-                pdctsubtitle: document.createElement("p"),
-                pdct: {
-                    container: document.createElement("div"),
-                }
-            },
+            title: document.createElement("h1"),
+            subtitle: document.createElement("p"),
         }, 
 
         cartbody: {
@@ -35,7 +29,8 @@ App.elements = {
         },
 
         footer: { 
-            container: document.createElement("section"),
-            footerlogo: document.createElement("img"),
+            container: {
+                footerlogo: document.createElement("img"),
+            }
         }
 }
