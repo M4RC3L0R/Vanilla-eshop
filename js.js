@@ -1,7 +1,8 @@
 const App = {
     init() { 
-        App.controlers.setHeader()
-        App.controlers.setBody()
-        App.controlers.setFooter()
+        this.controllers.setLayout()
+        this.controllers.setHeader()
+        this.controllers.setBody()
+        this.controllers.setFooter()
     }
 }

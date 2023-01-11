@@ -2,15 +2,9 @@ App.elements = {
         app: document.getElementById("app"),
 
         header: {
-            container: document.createElement("section"),
-            logoleft: {
-                container: document.createElement("div"),
-                logoL: document.createElement("img"),
-            },
-            logoright: {
-                container: document.createElement("div"),
-                logoR: document.createElement("img"),
-            },
+            container: document.createElement("div"),
+            Bakelogo: document.createElement("img"),
+            Cartlogo: document.createElement("img"),
         },
 
         mainbody: {
@@ -18,19 +12,10 @@ App.elements = {
             bigimage: document.createElement("img"),
             title: document.createElement("h1"),
             subtitle: document.createElement("p"),
-        }, 
-
-        cartbody: {
-            container: document.createElement("section"),
-            pdct: {
-                container: document.createElement("div"),
-            },
-            button: document.createElement("button"),
         },
 
-        footer: { 
-            container: {
-                footerlogo: document.createElement("img"),
-            }
-        }
+        footer: {
+            container: document.createElement("div"),
+            footerlogo: document.createElement("img"),
+        },
 }

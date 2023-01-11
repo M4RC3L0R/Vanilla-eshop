@@ -1,118 +1,156 @@
-App.controlers = {
+App.controllers = {
     setHeader() {
-        console.log("..[create static elements]")
-        const els = App.elements 
+      const els = App.elements 
 
-        console.log(els.app)
+      console.log(els.app)
 
-        const header = els.header
+      const header = els.header
 
-        //logo L //
-        logoleft = document.createElement("div")
-        logoL = document.createElement("img")
+      Bakelogo = document.createElement("img")
+      Cartlogo = document.createElement("img")
 
-        logoL.src = "./imgvanilla/Bakery.png"
-        logoL.style.width = "76.06px"
-        logoL.style.height = "50px"
-        logoL.style.margin = "35px 0 35px 48px"
-        logoL.style.position = "absolute"
-        
-        //logo R //
-        logoright = document.createElement("div")
-        logoR = document.createElement("img")
+      Bakelogo.src = "./imgvanilla/Bakery.png"
+      Cartlogo.src = "./imgvanilla/Cart.png"
 
-        logoR.src = "./imgvanilla/Cart.png"
-        logoR.style.width = "36px"
-        logoR.style.height = "36px"
-        logoR.style.margin = "42px 53px 42px 135px"
-        logoR.style.position = "absolute"
+      header.container.appendChild(Bakelogo)
+      header.container.appendChild(Cartlogo)
+      els.app.appendChild(header.container)
 
-        header.container.appendChild(logoleft)
-        logoleft.appendChild(logoL)
-        header.container.appendChild(logoright)
-        logoright.appendChild(logoR)
-        els.app.appendChild(header.container)
-
-
+      this.setStyle(Bakelogo, {
+        display: "flex",
+        position: "absolute",
+        width: "76.06px",
+        height: "50px",
+        left: "48px",
+        top: "35px",
+      })
+      this.setStyle(Cartlogo, {
+        display: "flex",
+        position: "absolute",
+        width: "36px",
+        height: "36px",
+        left: "1351px",
+        top: "42px",
+        cursor: "pointer",
+      })
       this.setStyle(header.container, {
         display: "flex",
-        height: "120px",
-        width: "100%",
-        justifyContent: "space-between",
-        position: "fixed",
         backgroundColor: "rgba(102, 102, 102, 0.3)",
-      })
-      this.setStyle(logoleft, {
-        display: "flex",
-        width: "200px",
-      })
-      this.setStyle(logoright, {
-        display: "flex",
-        width: "200px",
-      })
+        justifyContent: "space-between",
+        position: "absolute",
+        width: "1440px",
+        height: "120px",
+        left: "0px",
+        top: "0px",
+       })
     },
     setBody() {
-      const els = App.elements
+      const els = App.elements 
 
       const mainbody = els.mainbody
-      //bigimage//
+
       bigimage = document.createElement("img")
+      title = document.createElement("h1")
+      subtitle = document.createElement("p")
 
       bigimage.src = "./imgvanilla/BackGroundBread.png"
 
-      mainbody.container.appendChild(bigimage)
-      //bodyproductstitle//
+      title.innerHTML = "Our products"
+      subtitle.innerHTML = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut laoreet dolore magna aliquam erat volutpat."
 
       mainbody.container.appendChild(bigimage)
+      mainbody.container.appendChild(title)
+      mainbody.container.appendChild(subtitle)
       els.app.appendChild(mainbody.container)
 
-      this.setStyle(bigimage, {
-        width: "100%",
-        top: "0",
-        position: "fixed",
+
+      this.setStyle(bigimage,{
+        display: "flex",
+        position: "absolute",
+        width: "1440px",
+        height: "907px",
+        left: "0px",
+        top: "-115px",
         zIndex: "-1",
       })
+      this.setStyle(title, {
+        display: "flex",
+        justifyContent: "center",
+        position: "absolute",
+        width: "1440px",
+        height: "40px",
+        left: "0px",
+        top: "830px",
+        fontFamily: "Inter",
+        fontStyle: "normal",
+        fontWeight: "700",
+        fontSize: "24px",
+        lineHeight: "29px",
+        textAlign: "center",
+        color: "#000000",
+      })
+      this.setStyle(subtitle, {
+        display: "flex",
+        position: "absolute",
+        width: "944px",
+        height: "62px",
+        left: "248px",
+        top: "880px",
+        fontFamily: "'Inter'",
+        fontStyle: "normal",
+        fontWeight: "400px",
+        fontSize: "24px",
+        lineHeight: "29.05px",
+        textAlign: "center",
+        color: "#000000",
+      })
+      this.setStyle(mainbody.container, {
+        display: "flex",
+        backgroundColor: "",
+        flexGrow: "1",
+        width: "1440px",
+        height: "855.75px",
+        marginTop: "783.43px",
+      })
     },
-
     setFooter() {
-      const els = App.elements
-      
+      const els = App.elements 
       const footer = els.footer
 
-      footer = document.createElement("div")
       footerlogo = document.createElement("img")
 
       footerlogo.src = "./imgvanilla/Bakery.png"
 
-      footer.appendChild(footerlogo)
-      els.app.appendChild(ontainer)
+      footer.container.appendChild(footerlogo)
+      els.app.appendChild(footer.container)
 
-      this.setStyle(footer, {
-        display:"flex",
-        backgroundColor: "green",
-        justifyContent: "center",
-        width: "100%",
+      this.setStyle(footer.container, {
+        display: "flex",
+        alignItems: "end",
+        backgroundColor: "black",
+        width: "1440px",
         height: "250px",
-        left: "0px",
-        top: "1665px",
-        margin: "500px 0 30px 0"
+        marginTop: "1665px",
       })
       this.setStyle(footerlogo, {
         display: "flex",
+        position: "absolute",
         width: "76.06px",
         height: "50px",
         margin: "100px 682px 100px 682px",
       })
     },
+    setLayout() {
+      const els = App.elements 
 
-    layout() {
-      const els = App.elements
+      els.app.style.display = "flex"
+      els.app.style.border = "5px solid orange"
+      els.app.style.height = "100%"
+      els.app.style.flexDirection = "column"
 
-      this.setHeader
-      this.setBody
-      this.setFooter
-
-
+      this.setHeader()
+      this.setBody()
+      this.setFooter()
     },
 
  setStyle(el, style) {
