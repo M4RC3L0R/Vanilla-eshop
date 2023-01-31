@@ -23,7 +23,7 @@ App.controllers = {
 
       this.setStyle(header.Bakelogo, {
         display: "flex",
-        margin: "35px 0 35px 48px",
+        margin: "48px",
       })
       this.setStyle(header.Cartlogo, {
         display: "flex",
