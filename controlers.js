@@ -49,6 +49,12 @@ App.controllers = {
 
       mainbody.container = document.createElement("div")
       mainbody.bigimage = document.createElement("img")
+      mainbody.title = document.createElement("h3")
+      mainbody.subtitle = document.createElement("p")
+      mainbody.productsdiv = document.createElement("div")
+      mainbody.productsdiv.croissant = document.createElement("div")
+      mainbody.productsdiv.ryeBread = document.createElement("div")
+      mainbody.productsdiv.riceFlourBread = document.createElement("div")
 
       //mainbody.container.style.border = "1px solid blue"
      // mainbody.container.style.height = "200px"
@@ -57,15 +63,41 @@ App.controllers = {
       mainbody.bigimage.src = "./imgvanilla/BackGroundBread.png"
       mainbody.bigimage.style.width = "100%"
       mainbody.bigimage.style.height = "auto"
-      mainbody.bigimage.style.marginTop = "-150px"
+      mainbody.bigimage.style.marginTop = "-125px"
+
+      mainbody.title.innerHTML = "Our products"
+      mainbody.title.style.textAlign = "center"
+      mainbody.title.style.marginTop = "10px"
+      mainbody.subtitle.innerHTML = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut laoreet dolore magna aliquam erat volutpat."
+      mainbody.subtitle.style.textAlign = "center"
+      mainbody.subtitle.style.marginTop = "10px"
+
+      // = "./imgvanilla/CartBreadImg1.png"
+      console.log(mainbody.productsdiv.croissant)
+      mainbody.productsdiv.croissant.style.width = "300px"
       
 
 
+
+
+
       mainbody.container.appendChild(mainbody.bigimage)
+      mainbody.container.appendChild(mainbody.title)
+      mainbody.container.appendChild(mainbody.subtitle)
+      mainbody.container.appendChild(mainbody.productsdiv)
+      mainbody.productsdiv.appendChild(mainbody.productsdiv.croissant)
+      mainbody.productsdiv.croissant.appendChild(mainbody.productsdiv.croissant.croissantImg)
       els.app.appendChild(mainbody.container)
 
       this.setStyle(mainbody.bigimage, {
         
+      })
+
+      this.setStyle(mainbody.productsdiv, {
+        display: "flex",
+        border: "3px solid blue",
+        maxWidth: "1082px",
+        margin: "0 auto"
       })
 
     },
@@ -96,7 +128,7 @@ App.controllers = {
       const app = els.app
 
       app.style.display = "flex"
-      app.style.border = "5px solid green"
+     // app.style.border = "5px solid green"
       app.style.height = "100vh"
       app.style.flexDirection = "column"
     },
