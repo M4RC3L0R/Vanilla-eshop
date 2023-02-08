@@ -13,12 +13,7 @@ App.elements = {
             title: document.createElement("h1"),
             subtitle: document.createElement("p"),
             productsdiv: {
-                croissant: {
-                    croissantImg: document.createElement("img"),
-                    croissantTitle: document.createElement("h3"),
-                    croissantPrice: document.createElement("span"),
-                    croissantText: document.createElement("p"),
-                },
+                croissant: document.createElement("div"),
                 ryeBread: document.createElement("div"),
                 riceFlourBread: document.createElement("div"),
             },

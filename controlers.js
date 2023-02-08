@@ -51,10 +51,19 @@ App.controllers = {
       mainbody.bigimage = document.createElement("img")
       mainbody.title = document.createElement("h3")
       mainbody.subtitle = document.createElement("p")
+
       mainbody.productsdiv = document.createElement("div")
+
       mainbody.productsdiv.croissant = document.createElement("div")
+      mainbody.productsdiv.croissant.croissantImg = document.createElement("img")
+
+
       mainbody.productsdiv.ryeBread = document.createElement("div")
+      mainbody.productsdiv.ryeBread.ryeBreadImg = document.createElement("img")
+
+
       mainbody.productsdiv.riceFlourBread = document.createElement("div")
+      mainbody.productsdiv.riceFlourBread.riceFlourBreadImg = document.createElement("img")
 
       //mainbody.container.style.border = "1px solid blue"
      // mainbody.container.style.height = "200px"
@@ -72,21 +81,24 @@ App.controllers = {
       mainbody.subtitle.style.textAlign = "center"
       mainbody.subtitle.style.marginTop = "10px"
 
-      // = "./imgvanilla/CartBreadImg1.png"
-      console.log(mainbody.productsdiv.croissant)
+      mainbody.productsdiv.croissant.croissantImg.src = "./imgvanilla/CartBreadImg1.png"
+      mainbody.productsdiv.croissant.croissantImg.style.width = "150px"
+      mainbody.productsdiv.croissant.croissantImg.style.margin = "17px"
       mainbody.productsdiv.croissant.style.width = "300px"
+
+      mainbody.productsdiv.ryeBread.ryeBreadImg.src = "./imgvanilla/CartBreadImg2.png"
+
+      mainbody.productsdiv.riceFlourBread.riceFlourBreadImg.src = "./imgvanilla/CartBreadImg3.png"
       
-
-
-
-
-
       mainbody.container.appendChild(mainbody.bigimage)
       mainbody.container.appendChild(mainbody.title)
       mainbody.container.appendChild(mainbody.subtitle)
       mainbody.container.appendChild(mainbody.productsdiv)
       mainbody.productsdiv.appendChild(mainbody.productsdiv.croissant)
       mainbody.productsdiv.croissant.appendChild(mainbody.productsdiv.croissant.croissantImg)
+      mainbody.productsdiv.croissant.appendChild(mainbody.productsdiv.ryeBread.ryeBreadImg)
+      mainbody.productsdiv.croissant.appendChild(mainbody.productsdiv.riceFlourBread.riceFlourBreadImg)
+
       els.app.appendChild(mainbody.container)
 
       this.setStyle(mainbody.bigimage, {
@@ -97,7 +109,8 @@ App.controllers = {
         display: "flex",
         border: "3px solid blue",
         maxWidth: "1082px",
-        margin: "0 auto"
+        margin: "30px auto",
+        alignItems: "stretch"
       })
 
     },
