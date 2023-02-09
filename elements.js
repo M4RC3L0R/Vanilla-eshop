@@ -12,11 +12,20 @@ App.elements = {
             bigimage: document.createElement("img"),
             title: document.createElement("h1"),
             subtitle: document.createElement("p"),
-            productsdiv: {
-                croissant: document.createElement("div"),
-                ryeBread: document.createElement("div"),
-                riceFlourBread: document.createElement("div"),
-            },
+            productsdiv: document.createElement("div"),
+
+            croissantDiv: document.createElement("div"),
+            croissantImg: document.createElement("img"),
+            croissantTitle: document.createElement("h3"),
+            croissantPrice: document.createElement("span"),
+            croissantDescription: document.createElement("p"),
+
+            ryeBreadDiv: document.createElement("div"),
+            ryeBreadImg: document.createElement("img"),
+
+            riceFlourBreadDiv: document.createElement("div"),
+            riceFlourBreadImg: document.createElement("img"),
+
             button: document.createElement("button"),
         },
 

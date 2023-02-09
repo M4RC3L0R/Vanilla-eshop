@@ -46,27 +46,8 @@ App.controllers = {
       const els = App.elements 
 
       const mainbody = els.mainbody
+  
 
-      mainbody.container = document.createElement("div")
-      mainbody.bigimage = document.createElement("img")
-      mainbody.title = document.createElement("h3")
-      mainbody.subtitle = document.createElement("p")
-
-      mainbody.productsdiv = document.createElement("div")
-
-      mainbody.productsdiv.croissant = document.createElement("div")
-      mainbody.productsdiv.croissant.croissantImg = document.createElement("img")
-
-
-      mainbody.productsdiv.ryeBread = document.createElement("div")
-      mainbody.productsdiv.ryeBread.ryeBreadImg = document.createElement("img")
-
-
-      mainbody.productsdiv.riceFlourBread = document.createElement("div")
-      mainbody.productsdiv.riceFlourBread.riceFlourBreadImg = document.createElement("img")
-
-      //mainbody.container.style.border = "1px solid blue"
-     // mainbody.container.style.height = "200px"
       mainbody.container.style.flexGrow = "1"
 
       mainbody.bigimage.src = "./imgvanilla/BackGroundBread.png"
@@ -81,23 +62,29 @@ App.controllers = {
       mainbody.subtitle.style.textAlign = "center"
       mainbody.subtitle.style.marginTop = "10px"
 
-      mainbody.productsdiv.croissant.croissantImg.src = "./imgvanilla/CartBreadImg1.png"
-      mainbody.productsdiv.croissant.croissantImg.style.width = "150px"
-      mainbody.productsdiv.croissant.croissantImg.style.margin = "17px"
-      mainbody.productsdiv.croissant.style.width = "300px"
+      mainbody.productsdiv.style.justifyContent = "space-between" 
 
-      mainbody.productsdiv.ryeBread.ryeBreadImg.src = "./imgvanilla/CartBreadImg2.png"
-
-      mainbody.productsdiv.riceFlourBread.riceFlourBreadImg.src = "./imgvanilla/CartBreadImg3.png"
+      //croissant//
+      mainbody.croissantImg.src = "./imgvanilla/CartBreadImg1.png"
+      mainbody.croissantTitle.innerHTML = "Croissant"
+      mainbody.croissantPrice.innerHTML = "USD 2"
+      mainbody.croissantDescription.innerHTML = "Lorem ipsum dolor sit amet,consectetuer adipiscing elit"
+      
       
       mainbody.container.appendChild(mainbody.bigimage)
       mainbody.container.appendChild(mainbody.title)
       mainbody.container.appendChild(mainbody.subtitle)
       mainbody.container.appendChild(mainbody.productsdiv)
-      mainbody.productsdiv.appendChild(mainbody.productsdiv.croissant)
-      mainbody.productsdiv.croissant.appendChild(mainbody.productsdiv.croissant.croissantImg)
-      mainbody.productsdiv.croissant.appendChild(mainbody.productsdiv.ryeBread.ryeBreadImg)
-      mainbody.productsdiv.croissant.appendChild(mainbody.productsdiv.riceFlourBread.riceFlourBreadImg)
+      mainbody.productsdiv.appendChild(mainbody.croissantDiv)
+      mainbody.croissantDiv.appendChild(mainbody.croissantImg)
+      mainbody.croissantDiv.appendChild(mainbody.croissantTitle)
+      mainbody.croissantDiv.appendChild(mainbody.croissantPrice)
+      mainbody.croissantDiv.appendChild(mainbody.croissantDescription)
+
+
+      
+
+  
 
       els.app.appendChild(mainbody.container)
 
@@ -110,7 +97,12 @@ App.controllers = {
         border: "3px solid blue",
         maxWidth: "1082px",
         margin: "30px auto",
-        alignItems: "stretch"
+      })
+
+      this.setStyle(mainbody.croissantDiv, {
+        display: "flex",
+        flexDirection: "column",
+        textAlign: "center",
       })
 
     },
