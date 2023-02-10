@@ -136,7 +136,7 @@ App.controllers = {
         alignItems: "center",
         fontFamily: "Arial",
         fontSize: "15px",
-
+        flexWrap: "wrap",
       })
 
       this.setStyle(mainbody.croissantDiv, {
